@@ -42,6 +42,10 @@ public class Question
    {
       return response.equals(answer);
    }
+   
+   public void addText(String questionText){
+     text+= questionText;
+    }
 
    /**
       Displays this question.
