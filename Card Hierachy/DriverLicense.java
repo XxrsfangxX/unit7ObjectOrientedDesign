@@ -30,8 +30,8 @@ public class DriverLicense extends Card
    
    public boolean isExpired()
    {
-
-       if (calender.get(Calander.YEAR) > year)
+       GregorianCalendar calendar = new GregorianCalendar();
+       if (calendar.get(GregorianCalendar.YEAR) > year)
        {
            return true;
        }
@@ -40,5 +40,25 @@ public class DriverLicense extends Card
            return false;
        }
    }
-
+   
+   public String toString()
+   {
+       return "DriversLicense[name=" +getName()+"][Expiration Year =" + year+"]";
+   }
+   
+   public int getExpirationYear()
+   {
+      return year;
+   }
+    public boolean equals(DriverLicense card1){
+       
+       if(super.equals(card1)&& year == card1.year){
+           return true;
+           
+        }
+       else{
+           return false;
+        }
+           
+    }
 }

@@ -27,5 +27,9 @@ public class CallingCard extends Card
      return "Card holder: " + this.getName()+  "\n"+ "Pin: "+ pin+"\n"+ " Card Number: "+ cardNumber;
       
    }
+   public String toString()
+   {
+       return "CallingCard[name=" +getName()+"][Card Number =" + cardNumber+"]"+ "[Pin=" + pin+"]";
+   }
 
 }

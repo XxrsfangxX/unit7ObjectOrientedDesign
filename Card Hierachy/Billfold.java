@@ -24,4 +24,18 @@ public class Billfold
     public String formatCards(){
         return card1.format()+ card2.format();
     }
+    
+    public int getExpiredCardCount()
+    {
+        int expired = 0;
+        if(card1.isExpired())
+        {
+            expired++;
+        }
+        if(card2.isExpired())
+        {
+            expired++;
+        }
+        return expired;
+    }
 }

@@ -17,6 +17,15 @@ public class BillfoldTester
             bill.addCard(card2);
             System.out.println(bill.formatCards());
         }
+        public static void getExpiredCountTest()
+        {
+            Billfold bill= new Billfold();
+            Card card1= new CallingCard("Stevan",15,5567);
+            Card card2= new DriverLicense("Bob", 2015);
+            bill.addCard(card1);
+            bill.addCard(card2);
+            System.out.println(bill.getExpiredCardCount());
+        }
     }
 
 

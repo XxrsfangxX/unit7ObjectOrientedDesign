@@ -21,5 +21,9 @@ public class IDCard extends Card
      return "Card holder: " + this.getName()+ "\n"+ "ID number "+ idNumber;
       
    }
-
+   
+   public String toString()
+   {
+       return "IDCard[name=" +getName()+"][ID number =" + idNumber+"]";
+   }
 }
