@@ -1,40 +1,55 @@
-
-
 /**
- * Write a description of class Coin here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class Coin
+   A coin with a monetary value.
+*/
+public class Coin implements Comparable
 {
-    /** description of instance variable x (add comment for each instance variable) */
-    private int x;
+   private double value;
+   private String name;
 
-    /**
-     * Default constructor for objects of class Coin
-     */
-    public Coin()
-    {
-        // initialise instance variables
-        x = 0;
+   /**
+      Constructs a coin.
+      @param aValue the monetary value of the coin
+      @param aName the name of the coin
+   */
+   public Coin(double aValue, String aName) 
+   { 
+      value = aValue; 
+      name = aName;
+   }
+
+   /**
+      Gets the coin value.
+      @return the value
+   */
+   public double getValue() 
+   {
+      return value;
+   }
+
+   /**
+      Gets the coin name.
+      @return the name
+   */
+   public String getName() 
+   {
+      return name;
+   }
+   
+   public int compareTo(Object otherObject){
+       
+       Coin otherCoin= (Coin) otherObject;
+       
+       if( this.value< otherCoin.value){
+           return -1;
+           
+        }
+        else if ( this.value> otherCoin.value){
+            
+            return 1;
+        }
+        else{
+            return 0;
+        }
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *    that describes the operation of the method
-     *
-     * @pre        preconditions for the method
-     *            (what the method assumes about the method's parameters and class's state)
-     * @post    postconditions for the method
-     *            (what the method guarantees upon completion)
-     * @param    y    description of parameter y
-     * @return    description of the return value
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x+y;
-    }
-
+    
 }
