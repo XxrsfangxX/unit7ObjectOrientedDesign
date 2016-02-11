@@ -14,9 +14,11 @@ public class BetterRectangle extends Rectangle
     /**
      * Default constructor for objects of class BetterRectangle
      */
-    public BetterRectangle()
+    public BetterRectangle(int x, int y, int width, int height)
     {
         super();
+        this.setLocation(x,y);
+        this.setSize(width,height);
     }
     
     public double getPerimeter(){

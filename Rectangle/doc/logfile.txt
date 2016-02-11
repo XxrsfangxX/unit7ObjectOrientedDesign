@@ -1,0 +1,74 @@
+Class documentation
+<---- javadoc command: ---->
+C:\Program Files\Java\jdk1.8.0_45\bin\javadoc.exe
+-author
+-version
+-nodeprecated
+-package
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.8
+-classpath
+C:\Program Files\BlueJ\lib\bluejcore.jar;C:\Program Files\BlueJ\lib\junit-4.8.2.jar;C:\Program Files\BlueJ\lib\userlib\pi4j-core.jar;C:\Program Files\BlueJ\lib\userlib\pi4j-device.jar;C:\Program Files\BlueJ\lib\userlib\pi4j-gpio-extension.jar;C:\Program Files\BlueJ\lib\userlib\pi4j-service.jar;C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle
+-d
+C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\doc
+-encoding
+UTF-8
+-charset
+UTF-8
+-docletpath
+C:\Program Files\BlueJ\lib\bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\BetterRectangle.java
+<---- end of javadoc command ---->
+Loading source file C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\BetterRectangle.java...
+C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\BetterRectangle.java:17: error: illegal start of type
+    public BetterRectangle(int height, )
+                                       ^
+C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\BetterRectangle.java:17: error: ')' expected
+    public BetterRectangle(int height, )
+                                        ^
+C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\BetterRectangle.java:18: error: ';' expected
+    {
+     ^
+C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\BetterRectangle.java:19: error: illegal start of type
+        super();
+             ^
+C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\BetterRectangle.java:19: error: <identifier> expected
+        super();
+              ^
+C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\BetterRectangle.java:20: error: illegal start of type
+        this.setLocation();
+        ^
+C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\BetterRectangle.java:20: error: ';' expected
+        this.setLocation();
+            ^
+C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\BetterRectangle.java:20: error: invalid method declaration; return type required
+        this.setLocation();
+             ^
+C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\BetterRectangle.java:21: error: illegal start of type
+        this.setSize();
+        ^
+C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\BetterRectangle.java:21: error: ';' expected
+        this.setSize();
+            ^
+C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\BetterRectangle.java:21: error: invalid method declaration; return type required
+        this.setSize();
+             ^
+C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\BetterRectangle.java:24: error: class, interface, or enum expected
+    public double getPerimeter(){
+           ^
+C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\BetterRectangle.java:27: error: class, interface, or enum expected
+    }
+    ^
+C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\BetterRectangle.java:29: error: class, interface, or enum expected
+    public double getArea(){
+           ^
+C:\Users\rsfang\Desktop\GitHub\unit7ObjectOrientedDesign\Rectangle\BetterRectangle.java:31: error: class, interface, or enum expected
+    }
+    ^
+15 errors
