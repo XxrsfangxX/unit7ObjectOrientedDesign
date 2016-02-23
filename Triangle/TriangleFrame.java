@@ -21,7 +21,8 @@ public class TriangleFrame extends JFrame
         public void mousePressed(MouseEvent event){
             int x= event.getX();
             int y = event.getY();
-            scene.drawDot(x, y);
+            scene.drawDot(x,y);
+            
         }
 
         public void mouseReleased(MouseEvent event){}
