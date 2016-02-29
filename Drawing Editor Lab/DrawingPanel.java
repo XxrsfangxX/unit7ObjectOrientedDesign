@@ -3,8 +3,11 @@ import java.awt.Color;
 import java.awt.Shape;
 import java.util.ArrayList;
 import java.awt.event.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 import javax.swing.JFrame;
 import javax.swing.JColorChooser;
+import java.awt.Point;
 
 
 /**
@@ -28,6 +31,8 @@ public class DrawingPanel extends JPanel
         this.setBackground(Color.white);
         this.drawingColor= Color.red;
         this.pickColor();
+        MouseListener listener= new MyMouseListener();
+        this.addMouseListener(listener);
     }
     
     public void pickColor(){
@@ -40,23 +45,51 @@ public class DrawingPanel extends JPanel
     public Color getColor(){
         return drawingColor;
     }
-//     public class MyMouseListener implements MouseListener
-//     {
-//         public void mousePressed(MouseEvent e){
-//         }
-//         }
-// 
-//     
-//     public class MyMouseMotionListener implements MouseMotionListener
-//     {
-//         public void mouseDragged(MouseEvent e){
-//         }
-//         }
-// 
-//     
-//     public class MyKeyListener implements KeyListener
-//     {
-//         public void keyPressed(KeyEvent e){
-//         }
-//         }
+    public class MyMouseListener implements MouseListener
+    {
+        public void mousePressed(MouseEvent e){
+            Point point= e.getLocationOnScreen();
+            for(Shape i:shapes){
+                if( i.contains(point)){
+                    System.out.println("Shape has been touched");
+                }
+            
+            }
+            
+            
+            
+        }
+        public void mouseClicked(MouseEvent e){
+            
+        }
+        public void mouseReleased(MouseEvent e){
+            
+        }
+        public void mouseEntered(MouseEvent e){
+            
+        }
+        public void mouseExited(MouseEvent e){
+            
+        }
+        }
+
+    
+    public class MyMouseMotionListener implements MouseMotionListener
+    {
+        public void mouseDragged(MouseEvent e){
+        }
+        public void mouseMoved(MouseEvent e){
+        }
+        }
+
+    
+    public class MyKeyListener implements KeyListener
+    {
+        public void keyPressed(KeyEvent e){
+        }
+        public void keyTyped(KeyEvent e){
+        }
+        public void keyReleased(KeyEvent e){
+        }
+        }
     }
