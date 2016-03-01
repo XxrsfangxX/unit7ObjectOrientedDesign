@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JFrame;
 import javax.swing.JColorChooser;
 import java.awt.Point;
-
+import java.awt.Graphics2D;
 
 /**
  * Write a description of class DrawingPanel here.
@@ -45,6 +45,12 @@ public class DrawingPanel extends JPanel
     public Color getColor(){
         return drawingColor;
     }
+    
+//     public void paintComponent(Graphics2D g){
+//         for( Shape shape: shapes){
+//             shape.draw(g, true);
+//         }
+//     }
     public class MyMouseListener implements MouseListener
     {
         public void mousePressed(MouseEvent e){
@@ -57,7 +63,7 @@ public class DrawingPanel extends JPanel
             }
             
             
-            
+
         }
         public void mouseClicked(MouseEvent e){
             

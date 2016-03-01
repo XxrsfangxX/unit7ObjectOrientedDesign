@@ -11,8 +11,8 @@ import java.awt.BorderLayout;
 public class DrawingEditor extends JFrame
 {
     /** description of instance variable x (add comment for each instance variable) */
-    private static final int FRAME_WIDTH= 100;
-     private static final int FRAME_HEIGHT= 60;
+    private static final int FRAME_WIDTH= 500;
+     private static final int FRAME_HEIGHT= 500;
      
      private JFrame frame;
     

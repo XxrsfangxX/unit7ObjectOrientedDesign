@@ -2,6 +2,7 @@ import javax.swing.JPanel;
 import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.*;
+
 public class ControlPanel extends JPanel
 {
     // Instance variables
