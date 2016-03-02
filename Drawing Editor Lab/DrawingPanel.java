@@ -1,6 +1,6 @@
 import javax.swing.JPanel;
 import java.awt.Color;
-import java.awt.Shape;
+
 import java.util.ArrayList;
 import java.awt.event.*;
 import java.awt.event.ActionListener;
@@ -9,6 +9,8 @@ import javax.swing.JFrame;
 import javax.swing.JColorChooser;
 import java.awt.Point;
 import java.awt.Graphics2D;
+import java.awt.geom.Point2D;
+import java.awt.Graphics;
 
 /**
  * Write a description of class DrawingPanel here.
@@ -46,17 +48,29 @@ public class DrawingPanel extends JPanel
         return drawingColor;
     }
     
-//     public void paintComponent(Graphics2D g){
-//         for( Shape shape: shapes){
-//             shape.draw(g, true);
-//         }
-//     }
+    public void paintComponent(Graphics2D g){
+      
+    
+        for( Shape shape: shapes){
+            shape= (Circle) shape;
+            shape.draw(g, true);
+        }
+    }
+    public void addCircle(){
+        Circle circle= new Circle(new Point2D.Double(100,100), 20, Color.red);
+        shapes.add(0,circle);
+        repaint();
+    }
+    public void addSquare(){
+    }
+    
+ 
     public class MyMouseListener implements MouseListener
     {
         public void mousePressed(MouseEvent e){
             Point point= e.getLocationOnScreen();
             for(Shape i:shapes){
-                if( i.contains(point)){
+                if( i.isInside(point)){
                     System.out.println("Shape has been touched");
                 }
             
