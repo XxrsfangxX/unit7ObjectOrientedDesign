@@ -1,7 +1,7 @@
 import java.awt.geom.Point2D;   
 import java.awt.Color;
 import java.awt.Graphics2D;
-
+import java.awt.Point;
 
 public abstract class Shape
 {
@@ -35,13 +35,13 @@ public abstract class Shape
     public void setRaidus(Double r){
         this.radius=r; 
     }
-    public boolean isInside(Point2D.Double point){
+    public boolean isInside(Point point){
         
         return true;
     }
     
     
-    public boolean isOnBorer(Point2D.Double point){
+    public boolean isOnBorer(Point point){
         
         return true;
     }
