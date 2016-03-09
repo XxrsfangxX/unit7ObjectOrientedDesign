@@ -13,7 +13,7 @@ public class ControlPanel extends JPanel
      private JPanel currentColor;
      private Color drawingColor;
      private DrawingPanel canvas;
-     private Graphics2D g;
+
      
     
     public ControlPanel(DrawingPanel canvas){
@@ -23,10 +23,15 @@ public class ControlPanel extends JPanel
         ButtonListener pickColorListener= new ButtonListener();
         this.pickColorButton.addActionListener(pickColorListener);
         this.currentColor= new JPanel();
+        
         this.addCircleButton= new JButton("Add Circle");
         ButtonListener addCircleListener= new ButtonListener();
         this.addCircleButton.addActionListener(addCircleListener);
+        
         this.addSquareButton=new JButton("Add Square");
+        ButtonListener addSquareListener= new ButtonListener();
+        this.addSquareButton.addActionListener(addSquareListener);
+        
         drawingColor= canvas.getColor();
         currentColor.setBackground(drawingColor);
      
@@ -35,11 +40,9 @@ public class ControlPanel extends JPanel
         this.add(this.currentColor);
         this.add(this.addCircleButton);
         this.add(this.addSquareButton);
-        
+               
     }
-    public DrawingPanel getDrawingPanel(){
-        return this.canvas;
-    }
+    
     public class ButtonListener implements ActionListener
     {
         
@@ -52,13 +55,17 @@ public class ControlPanel extends JPanel
                 }
              else if (event.getActionCommand().equals("Add Circle"))
              {
-                 System.out.println("Hi");
+
                  canvas.addCircle();
+                
                  
-                 
-                }
-             else
+                 }
+             else if(event.getActionCommand().equals("Add Square"))
              {
+                 
+                 canvas.addSquare();
+                }
+                else{
                 }
         }
         }

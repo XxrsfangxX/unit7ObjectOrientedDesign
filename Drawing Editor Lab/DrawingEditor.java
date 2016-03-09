@@ -29,16 +29,17 @@ public class DrawingEditor extends JFrame
         //creates the frame. 
         
         this.setTitle("Drawing Editor");
+        
         this.add(controls, BorderLayout.SOUTH);
         this.add(canvas, BorderLayout.CENTER);
-        
+       
         
         
         this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setVisible(true);
         
-
+        
         
         
     }

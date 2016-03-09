@@ -24,8 +24,12 @@ public abstract class Shape
     public Point2D.Double getCenter(){
         return center; 
     }
+
+    public Color getColor(){
+        return color;
+    }
     
-    public void moveCenter(double x, double y){
+    public void move(double x, double y){
         this.center= new Point2D.Double(x,y);
     }
     public double getRadius(){
@@ -35,9 +39,8 @@ public abstract class Shape
     public void setRaidus(Double r){
         this.radius=r; 
     }
-    public boolean isInside(Point point){
-        
-        return true;
+    public boolean isInside(Point2D.Double point){
+        return true; 
     }
     
     
@@ -45,8 +48,7 @@ public abstract class Shape
         
         return true;
     }
-    public void draw(Graphics2D g2, boolean filled){
+    abstract void draw(Graphics2D g2, boolean filled);
         
-        
-    }
+     
 }
